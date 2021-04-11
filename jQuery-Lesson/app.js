@@ -1,11 +1,14 @@
 $(function(){
-  $('.box1').on('click', function(){
-    $(this).slideUp();
+  $('button').on('click', function(){
+    $('ul').children().css('color','red');
   });
 });
 
-// thisを利用すると、コードをシンプルにまとめることができる
-// thisは、「クリックされた要素」を指している
-// 今回のコードでは、「box1クラスの正方形がクリックされたとき、this（クリックされた要素）のみslideUpさせる」という設定になる
-// thisを使うと、このように多くの処理をまとめて書くことができる
-// ただし、コード上からでは、何をクリックしたときに動作するのか判別しにくいデメリットもある
+// 「children」は、HTML要素直下のすべての子要素を取得するときに使う
+
+// $('button').on('click', function(){
+// 「button要素がクリックされたときに、処理を実行してください」の意味
+
+// $('ul').children().css('color','red');
+// .children()は、HTML要素直下のすべての子要素を取得する
+// ここでのchildrenは「ul要素の子要素」、つまり、li要素が対象になる
