@@ -1,17 +1,11 @@
 $(function(){
-  $('.bg1').on('click', function(){
-    $('.bg1').slideUp();
-  });
-
-  $('.bg2').on('click', function(){
-    $('.bg2').slideUp();
-  });
-
-  $('.bg3').on('click', function(){
-    $('.bg3').slideUp();
-  });
-
-  $('.bg4').on('click', function(){
-    $('.bg4').slideUp();
+  $('.box1').on('click', function(){
+    $(this).slideUp();
   });
 });
+
+// thisを利用すると、コードをシンプルにまとめることができる
+// thisは、「クリックされた要素」を指している
+// 今回のコードでは、「box1クラスの正方形がクリックされたとき、this（クリックされた要素）のみslideUpさせる」という設定になる
+// thisを使うと、このように多くの処理をまとめて書くことができる
+// ただし、コード上からでは、何をクリックしたときに動作するのか判別しにくいデメリットもある
